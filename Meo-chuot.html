@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meo va chuot</title>
+</head>
+<body>
+
+</body>
+</html>
+<script !src="">
+
+  class Mouse{
+    status
+    keu
+
+    constructor(ten,khoiluong,tocdo) {
+        this.ten =ten
+        this.khoiluong = khoiluong
+        this.tocdo = tocdo
+    }
+
+    getStatus(){
+        if(this.status){
+            alert("Chuột sống")
+        }else{
+            alert("Chuột chết")
+        }
+    }
+    Die(){
+        this.status = false
+    }
+    noDie(){
+        this.status = true
+    }
+    actionChuot(amthanh){
+        this.keu = amthanh
+        alert(this.keu)
+    }
+
+
+  }
+
+
+  class Cat{
+      keu
+      constructor(ten,khoiluong,tocdo,mouse) {
+          this.ten = ten
+          this.khoiluong = khoiluong
+          this.tocdo = tocdo
+          this.mouse = mouse
+      }
+      getKhoiluong(){
+          return this.khoiluong
+      }
+
+      setKeu(){
+          this.keu = keu
+      }
+      getKeu(){
+          alert(this.keu)
+      }
+      hanhdong(){
+          this.keu = keu
+          alert(this.keu)
+      }
+      batchuot(){
+          if (this.mouse.tocdo < this.tocdo){
+              alert("Mèo bắt được chuột")
+          }else{
+              document.write(" Mèo không bắt đươc chuột")
+          }
+      }
+      anchuot(){
+          if (this.mouse.status){
+              this.khoiluong = this.khoiluong + this.mouse.khoiluong
+              this.mouse.status = false
+              alert("Chuột đã bị mèo ăn")
+          }
+      }
+  }
+
+  let chuot1 = new Mouse("baka",10,100)
+  let meo1 = new Cat("boko",20,200,chuot1)
+  chuot1.noDie()
+  meo1.batchuot()
+  meo1.anchuot()
+  console.log(meo1.getKhoiluong())
+
+
+</script>

@@ -5,8 +5,8 @@
     <title>Cong tac bong den</title>
 </head>
 <body>
-    <button onclick="congtac1.turnOn()">Bat</button>
-    <button onclick="congtac1.turnOff()">Tat</button>
+<!--    <button onclick="congtac1.turnOn()">Bat</button>-->
+<!--    <button onclick="congtac1.turnOff()">Tat</button>-->
 </body>
 </html>
 
@@ -33,6 +33,11 @@
       setDen(){
           this.den = den
       }
+
+      ketNoi(den){
+          return this.den = bongden
+      }
+
       turnOn(){
           alert("Den dang bat")
       }
@@ -41,9 +46,12 @@
       }
   }
 
-    let bongden1 = new bongden()
-    let congtac1 = new congtac()
-    bongden1.getStatus()
+    let bongden1 = new bongden(false)
+    let congtac1 = new congtac(bongden1,false)
+    document.write(congtac1.turnOn())
+    document.write(bongden1.getStatus())
+    document.write(congtac1.turnOff()())
+    document.write(bongden1.getStatus())
 
 
 </script>
