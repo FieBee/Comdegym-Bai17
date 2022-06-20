@@ -13,7 +13,6 @@
   class Mouse{
     status
     keu
-
     constructor(ten,khoiluong,tocdo) {
         this.ten =ten
         this.khoiluong = khoiluong
@@ -83,8 +82,12 @@
   let chuot1 = new Mouse("baka",10,100)
   let meo1 = new Cat("boko",20,200,chuot1)
   chuot1.noDie()
+  chuot1.getStatus()
   meo1.batchuot()
   meo1.anchuot()
+  chuot1.Die()
+  chuot1.getStatus()
+  chuot1.actionChuot("oi doi oi")
   console.log(meo1.getKhoiluong())
 
 
