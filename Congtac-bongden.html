@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cong tac bong den</title>
+</head>
+<body>
+    <button onclick="congtac1.turnOn()">Bat</button>
+    <button onclick="congtac1.turnOff()">Tat</button>
+</body>
+</html>
+
+<script !src="">
+
+  class bongden {
+      status
+      constructor(status) {
+          this.status = status
+      }
+      getStatus(){
+          return this.status
+      }
+  }
+
+  class congtac{
+      constructor(den,status) {
+          this.status = status
+          this.den = den
+      }
+      getDen(){
+          return this.den
+      }
+      setDen(){
+          this.den = den
+      }
+      turnOn(){
+          alert("Den dang bat")
+      }
+      turnOff(){
+          alert("Den dang tat")
+      }
+  }
+
+    let bongden1 = new bongden()
+    let congtac1 = new congtac()
+    bongden1.getStatus()
+
+
+</script>
