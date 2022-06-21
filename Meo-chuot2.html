@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhai lQ</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    class Chuot{
+        ten
+        khoiluong
+        tocdo
+
+        constructor(ten,khoiluong,tocdo) {
+            this.ten =ten
+            this.khoiluong = khoiluong
+            this.tocdo = tocdo
+        }
+        getKhoiluong(){
+            return this.khoiluong
+        }
+        setKhoiluong(){
+            this.khoiluong = khoiluong
+        }
+        getTocdo(){
+            return this.tocdo
+        }
+        setTocdo(){
+            this.tocdo = tocdo
+        }
+        Die(){
+            if (this.khoiluong ===0){
+                return true
+            }else {
+                return false
+            }
+        }
+        // noDie(){
+        //     return false
+        // }
+        trangThai(){
+            if(this.Die()){
+                alert("Chuot chet")
+            }else {
+                alert("Chuot song")
+
+            }
+        }
+
+        keu(){
+            alert(" chit' chit' hhuhuhu")
+        }
+    }
+
+
+    class Meo{
+        ten
+        khoiluong
+        tocdo
+        constructor(ten,khoiluong,tocdo) {
+            this.ten = ten
+            this.khoiluong =khoiluong
+            this.tocdo = tocdo
+        }
+
+        getKhoiluong(){
+            return this.khoiluong
+        }
+        setKhoiluong(){
+            this.khoiluong = khoiluong
+        }
+        getTocdo(){
+            return this.tocdo
+        }
+        setTocdo(){
+            this.tocdo = tocdo
+        }
+        keu(){
+            alert("Meo` meo' meo meo` meop")
+        }
+        batChuot(Chuot){
+            if (Chuot.tocdo < this.tocdo){
+                this.keu()
+                alert("Meo` da bat dc chuot")
+                Chuot.keu()
+                return true
+
+            }else {
+                alert("Meo khong bat dc chuot")
+                return false
+            }
+        }
+        anChuot(Chuot){
+            if (this.batChuot(Chuot)){
+                this.khoiluong = this.khoiluong + Chuot.khoiluong
+                Chuot.khoiluong = 0
+                alert("Măm măm")
+            }else {
+                alert("meo` ngu")
+            }
+        }
+
+    }
+
+    let chuot1 = new Chuot("Modor",10,10)
+    let meo1 = new Meo("Kaiser",100,20)
+
+    console.log(chuot1.trangThai())
+
+    // meo1.batChuot(chuot1)
+    meo1.anChuot(chuot1)
+    chuot1.trangThai()
+    alert(meo1.getKhoiluong())
+    alert(chuot1.getKhoiluong())
+
+</script>

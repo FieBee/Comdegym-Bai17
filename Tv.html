@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tv</title>
+</head>
+<body>
+
+</body>
+</html>
+<script !src="">
+
+   class Remote {
+       constructor(id,tv) {
+           this.id = id
+           this.tv = tv
+       }
+       setChannel(newChannel){
+           this.tv.channel = newChannel;
+       }
+       setVolume(newVolume){
+           this.tv.volume = newVolume;
+       }
+   }
+
+   class Tv{
+       volume
+       status
+       constructor(channel,volume) {
+           this.channel = channel
+           this.volume = volume
+       }
+       getStatus(){
+           if (this.status){
+               alert("Tv đang bật")
+           }else {
+               alert("Tv đang tắt ")
+           }
+       }
+       turnOn(){
+           return this.status= true
+       }
+       turnOff(){
+           return this.status =false
+       }
+       getChannel(){
+           return this.channel
+       }
+       getVolume(){
+           return this.volume
+       }
+       setChannel(newChannel){
+           this.channel = newChannel
+       }
+       setVolunme(newVolume){
+           this.volume = newVolume
+       }
+
+   }
+
+
+   let panasonic = new Tv(2,6)
+   let remote1 = new Remote(1,panasonic)
+   panasonic.turnOn()
+   panasonic.getStatus()
+   panasonic.setChannel(10)
+   panasonic.setVolunme(50)
+   console.log(panasonic.getChannel());
+
+   remote1.setChannel(3);
+   remote1.setVolume(12);
+   console.log(panasonic.getChannel());
+   console.log(panasonic.getVolume());
+
+</script>
